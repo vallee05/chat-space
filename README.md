@@ -49,7 +49,7 @@ has_many :messages
 ## groupテーブル
 |Column|Type|Options|
 |------|----|-------|
-|group_name|string|null: false|
+|name|string|null: false|
 |menber|integer|
 |user_id|references|null: false, foreign_key: true|
 
