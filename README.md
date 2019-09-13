@@ -39,7 +39,6 @@ Things you may want to cover:
 
 |Column|Type|Options|
 |------|----|-------|
-|id|integer|null: false|
 |name|string|null: false|
 |email|varchar|null: false, add_index: true|
 |password|char|null: false|
@@ -52,7 +51,6 @@ has_many :messages
 ## groupテーブル
 |Column|Type|Options|
 |------|----|-------|
-|id|integer|null: false|
 |group_name|string|null: false|
 |menber|integer|
 |user_id|references|null: false, foreign_key: true|
@@ -65,7 +63,6 @@ has_many :messages
 ## messagesテーブル
 |Column|Type|Options|
 |------|----|-------|
-|id|integer|null: false|
 |body|text|null: false|
 |image|string|
 |user_id|references|null: false, foreign_key: true|
