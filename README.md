@@ -33,7 +33,6 @@ Things you may want to cover:
 ### Association
 - belongs_to :group
 - belongs_to :user
-belongs_to :message
 
 
 ## usersテーブル
@@ -45,6 +44,7 @@ belongs_to :message
 ###Association
 has_many :groups, through :group_users
 has_many :messages
+has_many :group_users
 
 
 ## groupテーブル
@@ -55,7 +55,7 @@ has_many :messages
 ###Association
 has_many :users, through :group_users
 has_many :messages
-accepts_nested_attributes_for :group_users
+has_many :group_users
 
 
 ## messagesテーブル
