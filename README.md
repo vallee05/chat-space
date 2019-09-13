@@ -42,7 +42,7 @@ Things you may want to cover:
 |name|string|null: false, index: true|
 
 ###Association
-has_many :groups
+has_many :groups, through :group_users
 has_many :messages
 
 
@@ -54,8 +54,9 @@ has_many :messages
 |user_id|references|null: false, foreign_key: true|
 
 ###Association
-has_many :users
+has_many :users, through :group_users
 has_many :messages
+accepts_nested_attributes_for :group_users
 
 
 ## messagesテーブル
