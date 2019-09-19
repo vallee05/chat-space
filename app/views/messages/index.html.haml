@@ -1,0 +1,70 @@
+.chat-side
+  .side__header
+    yuui
+    .side-header__box
+      
+      .side-header__box__user-name
+        
+      .side-header__box__menu
+        
+        =link_to "http://localhost:3000/", class: "side-header__box__menu__new-group" do
+          = fa_icon 'edit'
+        =link_to "http://localhost:3000/", class: "side-header__box__menu__edit-user" do
+          = fa_icon 'cog'
+
+
+  =link_to "http://localhost:3000/", class: "groups" do
+    .group
+      .group__group-name
+        test
+      .group__latest-message
+        hhhhhh
+    .group
+      .group__group-name
+        test
+      .group__latest-message
+        hhhhhh
+
+
+.chat-main
+  .main-header
+    .main-header__left-box
+      .main-header__left-box__current-group
+        test
+      .main-header__left-box__member-list
+        Member:
+        .main-header__left-box__member-list__member
+          yuui
+    =link_to "http://localhost:3000/", class: "main-header__edit-btn" do
+      Edit
+
+
+  .messages
+    .message
+      .message__upper-info
+        .message__upper-info__talker
+          yuui
+        .message__upper-info__date
+          2019/09/16(Mon)17:24:34
+      .message__text
+        こんにちは
+    .message
+      .message__upper-info
+        .message__upper-info__talker
+          yuui
+        .message__upper-info__date
+          2019/09/16(Mon)17:24:34
+      .message__text
+        こんにちは
+
+
+  .form
+    .new_message
+      .input-box
+        .input-box__text
+          type a message
+        .input-box__image
+          .fa.fa-image
+          .input-box__image__file
+      =link_to "http://localhost:3000/", class: "submit-btn" do
+        Send
