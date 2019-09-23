@@ -26,7 +26,7 @@
         }
       }
     }
-    .main-header__edit-btn {
+    &__edit-btn {
       height: 40px;
       line-height: 40px;
       padding: 0 20px;
@@ -47,7 +47,7 @@
       &__upper-info {
         display: flex;
         margin-bottom: 10px;
-        .message__upper-info__talker {
+        &__upper-info__talker {
           color: #434a54;
           font-size: 16px;
           font-weight: bold;
@@ -80,7 +80,7 @@
       width: calc(100% - 50px);
       background-color: #ffffff;
     }
-    .input-box__text {
+    &__text {
       height: 50px;
       width: 100%;
       padding: 0 10px;
@@ -88,7 +88,7 @@
       border-style: none;
       line-height: 50px;
     }
-    .input-box__image {
+    &__image {
       position: absolute;
       top: 10px;
       right: 10px;

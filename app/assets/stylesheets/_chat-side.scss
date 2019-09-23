@@ -17,17 +17,17 @@
       justify-content: space-between;
       width: 100%;
       font-weight: bold;
-      .side-header__box__user-name {
+      &__user-name {
         margin: 0;
         padding: 0;
       }
-      .side-header__box__menu {
+      &__menu {
         display: flex;
-        .side-header__box__menu__new-group {
+        &__new-group {
           margin-left: 0.3rem;
           color: #ffffff;
         }
-        .side-header__box__menu__edit-user {
+        &__edit-user {
           margin-left: 0.3rem;
           color: #ffffff;
         }
@@ -44,12 +44,12 @@
   .group {
     margin-bottom: 40px;
     padding: 20px 20px 0;
-    .group__group-name {
+    &__group-name {
       font-size: 15px;
       margin-bottom: 5px;
       color: #ffffff;
     }
-    .group__latest-message {
+    &__latest-message {
       font-size: 11px;
       color: #ffffff;
     }
