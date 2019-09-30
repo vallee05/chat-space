@@ -1,30 +1,5 @@
-.chat-side
-  .side__header
-    yuui
-    .side-header__box
-      
-      .side-header__box__user-name
-        
-      .side-header__box__menu
-        =link_to "http://localhost:3000/", class: "side-header__box__menu__new-group" do
-          = fa_icon 'edit'
-        =link_to "http://localhost:3000/", class: "side-header__box__menu__edit-user" do
-          = fa_icon 'cog'
-
-
-  =link_to "http://localhost:3000/", class: "groups" do
-    .group
-      .group__group-name
-        test
-      .group__latest-message
-        hhhhhh
-    .group
-      .group__group-name
-        test
-      .group__latest-message
-        hhhhhh
-
-
+.wrapper
+  = render "groups/shared/side_ber"
 .chat-main
   .main-header
     .main-header__left-box
