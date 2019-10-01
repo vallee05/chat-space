@@ -34,25 +34,33 @@
       }
     }
   }
-}
 
 
-.groups {
-  height: calc(100vh -100px);
-  background-color: #2f3e51;
-  overflow: scroll;
-  .group {
+
+  .groups {
+    height: calc(100vh -100px);
+    background-color: #2f3e51;
+    overflow: scroll;
     margin-bottom: 40px;
     padding: 20px 20px 0;
-    &__group-name {
-      font-size: 15px;
-      margin-bottom: 5px;
-      color: #ffffff;
-    }
-    &__latest-message {
+
+    a {
+      color: white;
+      padding: 20px 20px 0;
       font-size: 11px;
-      color: #ffffff;
+      text-decoration: none;
+      .group {
+        &__group-name {
+          font-size: 15px;
+          margin-bottom: 5px;
+          color: #ffffff;
+        }
+        &__latest-message {
+          font-size: 11px;
+          color: #ffffff;
+        }
+      }
     }
   }
-}
 
+}
