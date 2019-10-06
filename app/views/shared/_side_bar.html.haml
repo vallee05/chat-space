@@ -1,21 +1,21 @@
 .chat-side
-  .side__header
+  .side-header
     .side-header__box
       .side-header__box__user-name
         = current_user.name
       .side-header__box__menu
-        =link_to new_group_path, class: "side-header__box__menu__new-group" do
+        =link_to new_group_path, class: "side-header__box__menu__icons" do
           = fa_icon 'edit'
-        =link_to edit_user_path(current_user), class: "side-header__box__menu__edit-user" do
+        =link_to edit_user_path(current_user), class: "side-header__box__menu__icons" do
           = fa_icon 'cog'
 
 
   .groups
     - current_user.groups.each do |group|
       .group
-        = link_to group_messages_path(group) do
+        = link_to group_messages_path(group), class: "link" do
           .group__name
             = group.name
           .group__message
-            メッセージはまだありません。
+            = group.show_last_message
 

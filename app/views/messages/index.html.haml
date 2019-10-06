@@ -1,5 +1,5 @@
 .wrapper
-  = render "groups/shared/side_ber"
+  = render "shared/side_bar"
 .chat-main
   .main-header
     .main-header__left-box
@@ -14,31 +14,21 @@
 
 
   .messages
-    .message
-      .message__upper-info
-        .message__upper-info__talker
-          yuui
-        .message__upper-info__date
-          2019/09/16(Mon)17:24:34
-      .message__text
-        こんにちは
-    .message
-      .message__upper-info
-        .message__upper-info__talker
-          yuui
-        .message__upper-info__date
-          2019/09/16(Mon)17:24:34
-      .message__text
-        こんにちは
+    = render @messages
+
 
 
   .form
-    .new_message
+    = form_for [@group, @message] do |f|
       .input-box
-        .input-box__text
-          type a message
-        .input-box__image
-          .fa.fa-image
-          .input-box__image__file
-      =link_to "http://localhost:3000/", class: "submit-btn" do
-        Send
+        = f.text_field :content, class: 'input-box__text', placeholder: 'type a message'
+        = f.label :image, class: 'input-box__image' do
+          = fa_icon 'picture-o'
+          = f.file_field :image, class: 'input-box__image__file'
+      = f.submit 'Send', class: 'send-btn'
+
+
+
+
+
+
