@@ -26,7 +26,6 @@ function buildMessage(message){
     e.preventDefault();
     var formData = new FormData(this);
     var url = $(this).attr('action');
-    // var $btn = formData.find('send-btn');
     $.ajax({
       url: url,
       type: "POST",
@@ -41,6 +40,7 @@ function buildMessage(message){
       $('.messages').append(html)
       $(".send-btn").attr('disabled', false);
       $('#message_content').val("")
+      $('.messages').scrollTop( $(".messages")[0].scrollHeight );
     })
     .fail(function(){
       alert('error');
