@@ -39,7 +39,7 @@ function buildMessage(message){
       var html = buildMessage(message);
       $('.messages').append(html)
       $(".send-btn").attr('disabled', false);
-      $('#message_content').val("")
+      $('#new_message')[0].reset();
       $('.messages').scrollTop( $(".messages")[0].scrollHeight );
     })
     .fail(function(){
