@@ -7,7 +7,7 @@ function buildMessage(message){
                      ${message.user_name}
                    </div>
                    <div class="message__upper-info__date">
-                     ${message.created_at}
+                     ${message.time}
                    </div>
                  </div>
                    <div class="message-text">
