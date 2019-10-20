@@ -1,5 +1,6 @@
-# キー              バリュー
-json.content       @message.content
-json.user_name     @message.user.name
-json.time          @message.created_at.to_s
-json.image         @message.image.url
+json.(@message, :content)
+json.time @message.created_at.to_s
+json.user_name @message.user.name
+#idもデータとして渡す
+json.id @message.id
+json.image @message.image.url
